@@ -14,7 +14,7 @@ namespace TMLL
         public string filename { get; set; }
         public Languages(string id, string language_name, string filename)
         {
-            this.Id = Id;
+            this.Id = id;
             this.language_name = language_name;
             this.filename = filename;
         }
@@ -23,11 +23,13 @@ namespace TMLL
     class tmll
     {
         public List<Languages> LanguagesList;
+        public Languages SelectLanguage;
 
         // Constructors
-        public tmll(string folder_name)
+        public tmll(string folder_name, string LanguageToSelect = "")
         {
             LanguagesList = new List<Languages>();
+            SelectLanguage = new Languages("", "", "");
             if (Directory.Exists(folder_name))
             {
                 foreach (string ficheros in Directory.GetFiles(folder_name, "*.lang"))
@@ -35,9 +37,23 @@ namespace TMLL
                     if (IniReadValue("info", "language", ficheros) != "")
                     {
                         LanguagesList.Add(new Languages(IniReadValue("info", "id", ficheros), IniReadValue("info", "language", ficheros), ficheros));
+                        if (LanguageToSelect == IniReadValue("info", "id", ficheros))
+                        {
+                            SelectLanguage.Id = LanguageToSelect;
+                            SelectLanguage.language_name = IniReadValue("info", "language", ficheros);
+                            SelectLanguage.filename = ficheros;
+                        }
                     }
                 }
+
             }
+        }
+
+        // Public Metods
+        public string ReadWord(string WordTag)
+        {
+
+            return IniReadValue("words", WordTag, SelectLanguage.filename);
         }
 
 
