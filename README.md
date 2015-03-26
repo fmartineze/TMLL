@@ -56,6 +56,44 @@ HOLA MUNDO EN ESPAÑOL
 HELLO WORLD IN ENGLISH
 ```
 
+FUNDAMENTOS
+===========
+
+Ha continuación se describe las funciones, motodos y objetos de la libreria.
+
+**Funciones**
+
+```c#
+  // Tipo: constructor
+  // Paramentros:
+  //     - folder_name(String):  Path donde están ubicados los archivos .lang
+  //     - LanguageToSelect(String): ID del idioma a selecionar como activo de forma predeterminada.
+  //
+  // Objetivo: Constructor de la clase, cataloga los archivos .lang incluidos en el "folder_name" y los inserta en a lista "LanguagesList", en caso de coincidir el ID con algun idioma, lo inserta en "SelectLanguage"
+  
+  public tmll(string folder_name, string LanguageToSelect = "")
+```
+
+```c#
+  // Tipo: Función
+  // Paramentros:
+  //     - WordTab(String): WordTag a buscar.
+  // Retorna: 
+  //     - (String) Cadena relacionada con el WordTag y el idioma activo.
+    
+  public string ReadWord(string WordTag)
+```
+
+**Propiedades**
+
+```c#
+  public List<Languages> LanguagesList  // Lista de idiomas encontrados en el Path indicado en el constructor.
+  public Languages SelectLanguage;      // Idioma activo
+  
+```
+
+
+
 Licence
 =======
 
