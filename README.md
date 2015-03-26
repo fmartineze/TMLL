@@ -94,7 +94,7 @@ Ha continuación se describe las funciones, motodos y objetos de la libreria.
 
 
 
-Licence
-=======
+Licencia
+========
 
 Esta librería está licenciada bajo Apache 2.0, para más información consulta LICENSE.md
