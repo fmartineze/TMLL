@@ -1,4 +1,4 @@
-TMLL - Tyny Multi-Language Library C#
+TMLL - Tiny Multi-Language Library C#
 =====================================
 
 Normalmente para realizar en programa con soporte de Multi-Lenguage, utilizaremos los recursos de localización y globalización que ya soporta c#.
