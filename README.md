@@ -1,25 +1,24 @@
 TMLL - Tyny Multi-Language Library C#
 =====================================
 
-Normalmente para realizar en programa con soporte de Multi-Lenguage, utilizaremos los recursos de localizacion y globalización que ya soporta c#
+Normalmente para realizar en programa con soporte de Multi-Lenguage, utilizaremos los recursos de localización y globalización que ya soporta c#.
 
 https://msdn.microsoft.com/es-es/library/dn602532.aspx
 http://www.codeproject.com/Tips/580043/How-to-make-a-multi-language-application-in-Csharp
 
-Pero en algunas ocasiones, es necesario externalizar las traducciones para que el usuario final pueda modificarlas facilmente o incluso añadir nuevos idiomas.
-Con este ultimo fin se ha desarrollado esta libreria.
+Pero en algunas ocasiones, es necesario externalizar las traducciones para que el usuario final pueda modificarlas fácilmente o incluso añadir nuevos idiomas. Con este último fin se ha desarrollado esta librería.
 
 
 Contribuciones
 --------------
 
-Se aceptan cualquier tipo de contribución, solución a bugs o cualquier otro aporte. Si desea reportarnos algun bug, lo pueden hacer abriendo un "issue" en GitHub.
+Se aceptan cualquier tipo de contribución, solución a bugs o cualquier otro aporte. Si desea reportarnos algún bug, lo pueden hacer abriendo un "issue" en GitHub.
 
 
 Ejemplos
 ========
 
-Los siguientes ejemplos ilustran como funciona la libreria. 
+Los siguientes ejemplos ilustran cómo funciona la librería.
 
 Ejemplo: Cargar los archivos de idiomas y mostrar un WordTag. 
 
@@ -60,4 +59,4 @@ HELLO WORLD IN ENGLISH
 Licence
 =======
 
-Esta libreria está licenciada bajo Apache 2.0, para mas información consulta LICENSE.md
+Esta librería está licenciada bajo Apache 2.0, para más información consulta LICENSE.md
