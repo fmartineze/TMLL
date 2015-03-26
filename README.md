@@ -28,7 +28,6 @@ tmll idiomas_es = new tmll(".\\MyLanguagePath", "es"); // Crea el Objeto "idioma
 tmll idiomas_en = new tmll(".\\MyLanguagePath", "en"); // Hace lo mismo pero marca como activo el que tenga el ID "en".
 Console.WriteLine( idiomas_es.ReadWord("hola_mundo") ); // Imprime el WordTag "hola_mundo" en Español
 Console.WriteLine( idiomas_en.ReadWord("hola_mundo") ); // Imprime el WordTag "hola_mundo" en Ingles
-}
 ```
 
 Fichero: .\MyLanguagePath\spanish.lang
