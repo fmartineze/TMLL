@@ -14,13 +14,28 @@ Contribuciones
 
 Se aceptan cualquier tipo de contribución, solución a bugs o cualquier otro aporte. Si desea reportarnos algún bug, lo pueden hacer abriendo un "issue" en GitHub.
 
+ChangeLog
+=========
+
+0.1.2 (30/03/2015)
+------------------
+
+* Refactoring
+* Se añade el metodo SetActiveLanguage(string IDlanguage), para cambiar el idioma activo.
+
+0.1.1 (26/03/2015)
+------------------
+
+* Desarrollo básico de la libreria e implementación del concepto.
+
+
 
 Ejemplos
 ========
 
 Los siguientes ejemplos ilustran cómo funciona la librería.
 
-Ejemplo: Cargar los archivos de idiomas y mostrar un WordTag. 
+Ejemplo 1: Cargar los archivos de idiomas y mostrar un WordTag. 
 
 ```c#
 tmll idiomas_es = new tmll(".\\MyLanguagePath", "es"); // Crea el Objeto "idiomas" el cual cataloga todos los ficheros .LANG en la ruta ".\\MyLanguagePath" y marca como activo el que tenga el ID "es".
@@ -28,6 +43,17 @@ tmll idiomas_en = new tmll(".\\MyLanguagePath", "en"); // Hace lo mismo pero mar
 Console.WriteLine( idiomas_es.ReadWord("hola_mundo") ); // Imprime el WordTag "hola_mundo" en Español
 Console.WriteLine( idiomas_en.ReadWord("hola_mundo") ); // Imprime el WordTag "hola_mundo" en Ingles
 ```
+
+Ejemplo 2: Carga archivo de idiomas y luego cambia el idioma activo.
+
+```c#
+tmll mis_idiomas = new tmll(".\\MyLanguagePath", "es"); // Crea el Objeto "idiomas" el cual cataloga todos los ficheros .LANG en la ruta ".\\MyLanguagePath" y marca como activo el que tenga el ID "es".
+Console.WriteLine( mis_idiomas.ReadWord("hola_mundo") ); // Imprime el WordTag "hola_mundo" en Español
+mis_idiomas.SetActiveLanguage("en"); // Cambia el idioma a Ingles.
+Console.WriteLine( mis_idiomas.ReadWord("hola_mundo") ); // Imprime el WordTag "hola_mundo" en Ingles
+
+```
+
 
 Fichero: .\MyLanguagePath\spanish.lang
 ```c#
@@ -93,6 +119,9 @@ Ha continuación se describe las funciones, motodos y objetos de la libreria.
 ```
 
 
+Compatibilidad
+==============
+Liberia desarrollada en Visual Studio 2013 y compatible con .NET Framework 2.0 o superior
 
 Licencia
 ========

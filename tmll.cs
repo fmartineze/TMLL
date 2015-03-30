@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 
 namespace TMLL
 {
-    class Languages
+    public class Languages
     {
         public string Id { get; set; }
         public string language_name { get; set; }
@@ -51,7 +51,20 @@ namespace TMLL
         }
 
         // Public Metods
-        public string ReadWord(string WordTag)
+
+        public bool SetActiveLanguage(string IDlanguage) // Change the activa language with ID string
+        {
+            if (LanguagesList.FindIndex(x => x.Id.Contains(IDlanguage)) >= 0)
+            {
+                SelectLanguage = LanguagesList.Find(x => x.Id.Contains(IDlanguage));
+
+                return true;
+            }
+            else { return false; }
+        }
+
+
+        public string ReadWord(string WordTag) // Return string of any WordTag
         {
 
             return IniReadValue("words", WordTag, SelectLanguage.filename);
